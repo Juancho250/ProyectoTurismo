@@ -1,9 +1,6 @@
 package org.example;
 
-import org.example.modelos.Local;
-import org.example.modelos.Oferta;
-import org.example.modelos.Reserva;
-import org.example.modelos.Usuario;
+import org.example.modelos.*;
 
 import java.util.Scanner;
 
@@ -17,6 +14,9 @@ public class Main
         Oferta oferta= new Oferta();
         Local local = new Local();
         Reserva reserva= new Reserva();
+        Afiliado afiliado= new Afiliado();
+
+        afiliado.
 
         System.out.println("______________ Menu ______________");
         System.out.println("1. Usuario");
@@ -74,6 +74,8 @@ public class Main
 
 
         }
+
+
 
     }
 }

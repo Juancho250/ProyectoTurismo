@@ -5,7 +5,7 @@ import org.example.validaciones.UsuarioValidacion;
 
 import java.util.Scanner;
 
-public class Usuario
+public abstract class Usuario
 {
 
     //ATRIBUTOS=VARIABLES=DATOS
@@ -15,6 +15,7 @@ public class Usuario
     private String documento;
     private Integer ubicacion;
     private String correoElectronico;
+    private final Integer costoAnual=2000000;
     private UsuarioValidacion validacion= new UsuarioValidacion();
 
 
@@ -113,6 +114,10 @@ public class Usuario
         }
     }
 
+    public Integer getCostoAnual() {
+        return costoAnual;
+    }
+
     @Override
     public String toString() {
         return "Usuario{" +
@@ -126,7 +131,7 @@ public class Usuario
     }
 
     //METODOS ORDINARIOS
-
+    public abstract Double calcularAnualidad();
 
 
 }
