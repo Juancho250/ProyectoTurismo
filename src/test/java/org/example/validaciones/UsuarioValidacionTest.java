@@ -37,4 +37,19 @@ class UsuarioValidacionTest
         Exception exception=Assertions.assertThrows(Exception.class,()->usuarioValidacion.validarNombre(nombreInvalido));
         Assertions.assertEquals(Mensajes.NOMBRE_SOLO_LETRAS.getMensaje(),exception.getMessage());
     }
+
+    @Test
+    public void validarCorreoCorrecto()
+    {
+        String correoValido="Juaz2560@gmail.com";
+        Assertions.assertDoesNotThrow(()->usuarioValidacion.validarCorreo(correoValido));
+    }
+
+    @Test
+    public void validarCorreoIncorrecto()
+    {
+        String correoInvalido="juaz2560gmail.com";
+        Exception exception= Assertions.assertThrows(Exception.class,()->usuarioValidacion.validarCorreo(correoInvalido));
+        Assertions.assertEquals(Mensajes.CORREO_INVALIDO.getMensaje(), exception.getMessage());
+    }
 }
