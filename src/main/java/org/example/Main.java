@@ -8,7 +8,9 @@ public class Main
 {
     public static void main(String[] args)
     {
-        Integer seleccion;
+
+        Afiliado afiliado= new Afiliado();
+        /*Integer seleccion;
         Scanner teclado = new Scanner(System.in);
         Usuario usuario= new Usuario();
         Oferta oferta= new Oferta();
@@ -73,7 +75,7 @@ public class Main
                 System.out.println("-----------------------------");break;
 
 
-        }
+        }*/
 
 
 

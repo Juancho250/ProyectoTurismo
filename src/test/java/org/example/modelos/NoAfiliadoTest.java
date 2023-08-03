@@ -4,16 +4,14 @@ import org.junit.jupiter.api.BeforeEach;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class AfiliadoTest {
+class NoAfiliadoTest {
 
-    private Afiliado afiliado;
+    private NoAfiliado noAfiliado;
 
     @BeforeEach
     public void setUp()
     {
-        this.afiliado= new Afiliado();
+        this.noAfiliado= new NoAfiliado();
     }
-
-
 
 }
