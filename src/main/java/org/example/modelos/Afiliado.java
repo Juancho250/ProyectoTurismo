@@ -1,12 +1,14 @@
 package org.example.modelos;
 
+import org.example.interfaces.Deduccion;
+import org.example.interfaces.Reporte;
 import org.example.utilidades.MetodosPago;
 
-public class Afiliado extends Usuario
+public class Afiliado extends Usuario implements Deduccion, Reporte
 {
     private Integer valorMembresia;
     private MetodosPago metodoPago;
-    private String documentoReferido;
+    private String cedula;
     private final Double IVA= 0.19;
 
     public Afiliado() {
@@ -16,7 +18,7 @@ public class Afiliado extends Usuario
         super(id, nombres, documento, ubicacion, correoElectronico);
         this.valorMembresia = valorMembresia;
         this.metodoPago = metodoPago;
-        this.documentoReferido = documentoReferido;
+        this.cedula = cedula;
     }
 
     @Override
@@ -43,15 +45,35 @@ public class Afiliado extends Usuario
     }
 
     public String getDocumentoReferido() {
-        return documentoReferido;
+        return cedula;
     }
 
     public void setDocumentoReferido(String documentoReferido) {
-        this.documentoReferido = documentoReferido;
+        this.cedula = cedula;
     }
 
     public Double aplicarIVAMembresia()
     {
         return  this.valorMembresia+this.IVA+this.valorMembresia;
+    }
+
+    @Override
+    public void calcularDeduccionAnualidad() {
+
+    }
+
+    @Override
+    public Double calcularDescuentoMensualidad() {
+        return null;
+    }
+
+    @Override
+    public void generarReporte() {
+
+    }
+
+    @Override
+    public void modificarReporte(Integer id) {
+
     }
 }

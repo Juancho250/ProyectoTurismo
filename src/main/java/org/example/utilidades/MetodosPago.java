@@ -2,8 +2,11 @@ package org.example.utilidades;
 
 public enum MetodosPago {
 
-    NEQUI,
-    BANCOLOMBIA;
+    EFECTIVO,
+    PSE,
+    TARJETA_CREDITO,
+    TARJETA_DEBITO,
+    PAYPAL
 
 
 }

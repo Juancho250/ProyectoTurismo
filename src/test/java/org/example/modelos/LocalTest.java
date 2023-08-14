@@ -8,8 +8,4 @@ class LocalTest {
 
         private Local local;
 
-
-        @BeforeEach
-    public void
-
 }

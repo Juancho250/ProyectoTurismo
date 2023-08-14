@@ -10,12 +10,6 @@ class UsuarioTest
 {
     private Usuario usuario;
 
-    @BeforeEach
-    public void configuracionInicial()
-    {
-        this.usuario= new Usuario();
-
-    }
     @Test
     public void setCorrectoDeNombres ()
     {

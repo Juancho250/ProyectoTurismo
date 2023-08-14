@@ -13,7 +13,9 @@ public enum Mensajes
     FECHA_INCORRECTA("Señor ususario la fecha debe ser en formato (DD/MM/YYYY)"),
     COSTO_NEGATIVO("El costo por persona no puede ser negativo"),
     MAXIMO_PERSONAS("El número de personas por reserva no puede ser mayor a 4"),
-    FECHAS_NO_COHERENTES("La fecha de fin debe ser mayor a la de inicio");
+    FECHAS_NO_COHERENTES("La fecha de fin debe ser mayor a la de inicio"),
+    VALOR_MEMBRESIA("El valor de la membresia no puede ser menor a 20000 ni mayor a 150000"),
+    NUMERO_DE_CEDULA("El numero de cedula es invalido");
 
     private String mensaje;
 

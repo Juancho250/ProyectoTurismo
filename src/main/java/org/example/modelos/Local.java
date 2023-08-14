@@ -3,7 +3,7 @@ package org.example.modelos;
 import org.example.validaciones.LocalValidacion;
 import org.example.validaciones.UsuarioValidacion;
 
-public class Local
+public abstract class Local
 {
     //ATRIBUTOS=VARIABLES=DATOS
 

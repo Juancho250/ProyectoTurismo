@@ -52,4 +52,10 @@ class UsuarioValidacionTest
         Exception exception= Assertions.assertThrows(Exception.class,()->usuarioValidacion.validarCorreo(correoInvalido));
         Assertions.assertEquals(Mensajes.CORREO_INVALIDO.getMensaje(), exception.getMessage());
     }
+
+    @Test
+    public void validarUbicacionCorrecta()
+    {
+
+    }
 }
