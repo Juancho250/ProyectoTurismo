@@ -5,7 +5,7 @@ import org.example.interfaces.Reporte;
 
 public class NoAfiliado extends Usuario implements Deduccion, Reporte
 {
-
+    private Integer numeroReservasMensuales;
 
 
     @Override
@@ -14,7 +14,8 @@ public class NoAfiliado extends Usuario implements Deduccion, Reporte
     }
 
     @Override
-    public void calcularDeduccionAnualidad() {
+    public double calcularDeduccionAnualidad() {
+        return 0;
     }
 
     @Override

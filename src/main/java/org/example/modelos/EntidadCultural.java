@@ -3,11 +3,11 @@ package org.example.modelos;
 import org.example.interfaces.Deduccion;
 import org.example.interfaces.Reporte;
 
-public class EmpresaPrivada extends Local implements Deduccion, Reporte
-{
+public class EntidadCultural extends Local implements Deduccion, Reporte {
     @Override
-    public void calcularDeduccionAnualidad() {
+    public double calcularDeduccionAnualidad() {
 
+        return 0;
     }
 
     @Override

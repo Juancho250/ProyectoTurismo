@@ -58,13 +58,13 @@ public class Afiliado extends Usuario implements Deduccion, Reporte
     }
 
     @Override
-    public void calcularDeduccionAnualidad() {
-
+    public double calcularDeduccionAnualidad() {
+        return getCostoAnual() * 0.2;
     }
 
     @Override
     public Double calcularDescuentoMensualidad() {
-        return null;
+        return getValorMembresia() * 0.2;
     }
 
     @Override

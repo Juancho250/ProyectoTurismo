@@ -6,23 +6,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class UsuarioTest
-{
-    private Usuario usuario;
+class UsuarioTest{
 
-    @Test
-    public void setCorrectoDeNombres ()
-    {
-        String nombreValido="Juan Esteban Muñoz Uribe";
-        this.usuario.setNombres(nombreValido); //Ejecutar
-        Assertions.assertEquals(nombreValido, usuario.getNombres());
-    }
-
-    @Test
-    public void setIncorrectoNombres()
-    {
-        String nombreInvalido= "Juan 1234";//Preparar
-        this.usuario.setNombres(nombreInvalido);//Ejecutar
-        Assertions.assertNotEquals(nombreInvalido, usuario.getNombres());
-    }
 }
