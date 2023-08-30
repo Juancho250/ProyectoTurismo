@@ -56,6 +56,15 @@ class UsuarioValidacionTest
     @Test
     public void validarUbicacionCorrecta()
     {
+        Integer zonaValida= 3;
+        Assertions.assertDoesNotThrow(()->usuarioValidacion.validarUbicacion(zonaValida));
+    }
 
+    @Test
+    public void validarUbicacionIncorrecta()
+    {
+        Integer zonaInvalida= 7;
+        Exception exception=Assertions.assertThrows(Exception.class, ()->usuarioValidacion.validarUbicacion(zonaInvalida));
+        Assertions.assertEquals(Mensajes.ZONA_INVALIDA.getMensaje(), exception.getMessage());
     }
 }

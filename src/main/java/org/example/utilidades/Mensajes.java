@@ -15,7 +15,9 @@ public enum Mensajes
     MAXIMO_PERSONAS("El número de personas por reserva no puede ser mayor a 4"),
     FECHAS_NO_COHERENTES("La fecha de fin debe ser mayor a la de inicio"),
     VALOR_MEMBRESIA("El valor de la membresia no puede ser menor a 20000 ni mayor a 150000"),
-    NUMERO_DE_CEDULA("El numero de cedula es invalido");
+    NUMERO_DE_CEDULA("El numero de cedula es invalido"),
+    NUMERO_DE_RESERVAS_NEGATIVO("El numero de reservas no puede ser negativo"),
+    NUMERO_DE_PERSONAS_EXCEDIDO("La cantidad de personas no puede ser mayor a 4");
 
     private String mensaje;
 

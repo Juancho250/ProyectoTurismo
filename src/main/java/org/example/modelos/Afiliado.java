@@ -14,8 +14,7 @@ public class Afiliado extends Usuario implements Deduccion, Reporte
     public Afiliado() {
     }
 
-    public Afiliado(Integer id, String nombres, String documento, Integer ubicacion, String correoElectronico, Integer valorMembresia, MetodosPago metodoPago, String documentoReferido) {
-        super(id, nombres, documento, ubicacion, correoElectronico);
+    public Afiliado(Integer valorMembresia, MetodosPago metodoPago, String cedula) {
         this.valorMembresia = valorMembresia;
         this.metodoPago = metodoPago;
         this.cedula = cedula;
@@ -44,12 +43,16 @@ public class Afiliado extends Usuario implements Deduccion, Reporte
         this.metodoPago = metodoPago;
     }
 
-    public String getDocumentoReferido() {
+    public String getCedula() {
         return cedula;
     }
 
-    public void setDocumentoReferido(String documentoReferido) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
+    }
+
+    public Double getIVA() {
+        return IVA;
     }
 
     public Double aplicarIVAMembresia()

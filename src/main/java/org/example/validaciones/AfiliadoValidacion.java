@@ -8,7 +8,7 @@ public class AfiliadoValidacion
     public AfiliadoValidacion() {
     }
 
-    protected Util util= new Util();
+    private Util util=new Util();
 
     public Boolean validarMembresia(Integer membresia) throws Exception
     {
@@ -23,8 +23,9 @@ public class AfiliadoValidacion
     }
     public Boolean validarCedula(String cedula) throws Exception
     {
-        String expresionRegular= "^[0-9]+$\n";
-        if (!util.buscarCoincidencia(expresionRegular, cedula))
+        String expresionRegular = "^[0-9]{10}$";
+
+        if (!util.buscarCoincidencia(expresionRegular,cedula))
         {
             throw new Exception(Mensajes.NUMERO_DE_CEDULA.getMensaje());
         }

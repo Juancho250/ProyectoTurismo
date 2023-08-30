@@ -32,17 +32,19 @@ class AfiliadoValidacionTest {
     }
 
     @Test
-    public void validarCedulaCorrecta()
+    public void validarCedulaCorrecto()
     {
-        String cedulaValida= "12345678";
-        Assertions.assertDoesNotThrow(()->afiliadoValidacion.validarCedula(cedulaValida));
+        String cedulaInvalida = "1234567899";
+        Assertions.assertDoesNotThrow(() -> this.afiliadoValidacion.validarCedula(cedulaInvalida));
     }
+
     @Test
     public void validarCedulaIncorrecta()
     {
-        String cedulaInvalida= "1j2734jk5";
-        Exception exception=Assertions.assertThrows(Exception.class, ()->afiliadoValidacion.validarCedula(cedulaInvalida));
+        String cedulaInvalida= "234";
+        Exception exception= Assertions.assertThrows(Exception.class, ()->afiliadoValidacion.validarCedula(cedulaInvalida));
         Assertions.assertEquals(Mensajes.NUMERO_DE_CEDULA.getMensaje(), exception.getMessage());
     }
+
 
 }
